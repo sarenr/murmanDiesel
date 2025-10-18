@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 export default function Header() {
   const [isTransparent, setIsTransparent] = useState(true);
-
+// gagga
   useEffect(() => {
     const handleScroll = () => {
       setIsTransparent(window.scrollY < 10);
