@@ -12,7 +12,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.slide-up {
+  opacity: 0;
+  animation: slideUp 0.7s ease-out forwards;
+}
 a {
   font-weight: 500;
   color: #f7eeee;
