@@ -22,12 +22,10 @@ export default function Hero() {
     <p className="text-2xl">Обучение впраска топливных систем</p>
     <p className="text-2xl">Ремонт турбин</p><br />
     <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">Оставить заявку</button>
-    
   </div>
   <div className='w-1/3 text-white'> 
       список преймуществ 
   </div>
-  
 </div>
  );
 }

@@ -1,13 +1,15 @@
 import Header from  './headerScroll';
 import Hero from './heroSection';
+import Service from './serviceSection';
 export function App() {
   return (
-    <div className="w-full h-3000">
-    <div className= " relative h-dvh">
+    
+    <div className= " relative h-full">
      <Header />
      <Hero />
+     <Service />
     </div>
-    </div>
+    
 
   );
 }
