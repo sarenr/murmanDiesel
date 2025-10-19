@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+
 export default function Header() {
   const [isTransparent, setIsTransparent] = useState(true);
-// gagga
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsTransparent(window.scrollY < 10);
@@ -12,34 +14,63 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0  z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isTransparent 
         ? 'bg-transparent shadow-none' 
         : 'bg-black/15 backdrop-blur-md shadow-lg'
     }`}>
-      <nav className="mx-40 px-6 py-3">
-        {/* Логотип здесь */}
-   <div className=" font-bold flex items-center justify-between">
-    
-    <div><img src="./public/images/logo.png" alt="" /></div>
-            {/* Навигационные ссылки здесь */}
-    <div className="flex items-center space-x-6">
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition-colors text-sm">Главная</a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition-colors text-sm">Услуга</a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition-colors text-sm">Контакты</a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition-colors text-sm">Фото</a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition-colors text-sm">Статьи</a>
-            <a href="#" className="text-gray-700 hover:text-blue-500 transition-colors text-sm">Отзывы</a>
-            {/* Кнопка здесь */}
-            <button className="font-extrabold ml-5 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-            Оставить заявку
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <div className="flex items-center justify-between">
+          
+          {/* Логотип */}
+          <div><img src="./public/images/logo.png" alt="" /></div>
+
+          {/* Десктопное меню */}
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+            <a href="#hero" className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base">Главная</a>
+            <a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base">Услуги</a>
+            <a href="#contacts" className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base">Контакты</a>
+            <a href="#gallery" className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base">Фото</a>
+            <a href="#articles" className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base">Статьи</a>
+            <a href="#reviews" className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base">Отзывы</a>
+            
+            <button className="font-bold bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 lg:px-4 lg:py-2 rounded-lg transition-colors text-sm lg:text-base">
+              Оставить заявку
+            </button>
+          </div>
+
+          {/* Мобильное меню кнопка */}
+          <button 
+            className="md:hidden text-white p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
           </button>
-    </div>
-    
-    
-    
-  </div>
-</nav>
+        </div>
+
+        {/* Мобильное меню */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 bg-black/90 backdrop-blur-md rounded-lg p-4">
+            <div className="flex flex-col space-y-3">
+              <a href="#hero" className="text-gray-300 hover:text-white transition-colors py-2">Главная</a>
+              <a href="#services" className="text-gray-300 hover:text-white transition-colors py-2">Услуги</a>
+              <a href="#contacts" className="text-gray-300 hover:text-white transition-colors py-2">Контакты</a>
+              <a href="#gallery" className="text-gray-300 hover:text-white transition-colors py-2">Фото</a>
+              <a href="#articles" className="text-gray-300 hover:text-white transition-colors py-2">Статьи</a>
+              <a href="#reviews" className="text-gray-300 hover:text-white transition-colors py-2">Отзывы</a>
+              <button className="font-bold bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg transition-colors mt-2">
+                Оставить заявку
+              </button>
+            </div>
+          </div>
+        )}
+      </nav>
     </header>
   );
 }

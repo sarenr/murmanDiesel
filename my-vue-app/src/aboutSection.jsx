@@ -22,79 +22,83 @@ function AnimatedCard({ delay = '0s', children }) {
 }
 export default function About() {
   return (
-    <div className="flex flex-col items-center justify-center h-full bg-black text-white relative py-16">
-      <h1 className="text-4xl font-bold mb-10">Почему выбирают нас?</h1>
+    <div className="flex flex-col items-center justify-center bg-black text-white relative py-12 sm:py-16 lg:py-20">
+      {/* Заголовок */}
+      <div className="text-center mb-8 sm:mb-12 lg:mb-16 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
+          Почему выбирают нас?
+        </h1>
+      </div>
 
-      <div className="grid gap-6  grid-cols-1 md:grid-cols-2 auto-rows-[250px] px-6 w-full max-w-7xl">
-        {/* 1  */}
+      {/* Сетка карточек */}
+      <div className="grid gap-4 sm:gap-6 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Карточка 1 */}
         <AnimatedCard delay="0.1s">
           <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
-          flex flex-col justify-center items-center text-center h-full bg-gray-900 rounded-2xl shadow-lg p-6">
-            <img className="w-16 h-16 mb-4" src="./images/gear.svg" alt="gear" />
-            
-            <h2 className="text-2xl font-bold mb-2">Оборудование</h2>
-            <p className="text-base">
+          flex flex-col justify-center items-center text-center bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 h-full min-h-[200px]">
+            <img className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-3 sm:mb-4" src="./images/gear.svg" alt="gear" />
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Оборудование</h2>
+            <p className="text-sm sm:text-base text-gray-300">
               Мы используем только профессиональное оборудование и запчасти для ремонта
             </p>
           </div>
         </AnimatedCard>
 
-        {/* 2 */}
+        {/* Карточка 2 */}
         <AnimatedCard delay="0.15s">
           <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
-          flex flex-col justify-center items-center text-center h-full bg-gray-900 rounded-2xl shadow-lg p-6">
-            <img className="w-16 h-16 mb-4" src="./images/like.svg" alt="like" />
-            <h2 className="text-2xl font-bold mb-2">Качество</h2>
-            <p className="text-base">
+          flex flex-col justify-center items-center text-center bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 h-full min-h-[200px]">
+            <img className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-3 sm:mb-4" src="./images/like.svg" alt="like" />
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Качество</h2>
+            <p className="text-sm sm:text-base text-gray-300">
               Мы отвечаем за качество выполненных работ и даём собственные гарантии
             </p>
           </div>
         </AnimatedCard>
-
-        {/* 3 */}
-        <AnimatedCard delay="0.2s">
+        {/* Карточка 3 */}
+        <AnimatedCard delay="0.25s">
           <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
-          flex flex-col justify-center items-center text-center h-full bg-gray-900 rounded-2xl shadow-lg p-6">
-            <img className="w-16 h-16 mb-4" src="./images/person.svg" alt="person" />
-            <h2 className="text-2xl font-bold mb-2">Персонал</h2>
-            <p className="text-base">
+          flex flex-col justify-center items-center text-center bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 h-full min-h-[200px]">
+            <img className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-3 sm:mb-4" src="./images/person.svg" alt="like" />
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Персонал</h2>
+            <p className="text-sm sm:text-base text-gray-300">
               Профессиональная подготовка в официальном центре Common Rail
             </p>
           </div>
         </AnimatedCard>
-
-        {/* 4 */}
-        <AnimatedCard delay="0.25s">
-          <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
-          flex flex-col justify-center items-center text-center h-full bg-gray-900 rounded-2xl shadow-lg p-6">
-            <img className="w-16 h-16 mb-4" src="./images/number1.svg" alt="number1" />
-            <h2 className="text-2xl font-bold mb-2">Номер 1</h2>
-            <p className="text-base">
-              Наши клиенты пользуются нашими услугами и рекомендуют нас
-            </p>
-          </div>
-        </AnimatedCard>
-
-        {/* 5 */}
-        <AnimatedCard delay="0.3s">
-          <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
-          flex flex-col justify-center items-center text-center h-full bg-gray-900 rounded-2xl shadow-lg p-6">
-            <img className="w-16 h-16 mb-4" src="./images/speed.svg" alt="speed" />
-            <h2 className="text-2xl font-bold mb-2">Скорость</h2>
-            <p className="text-base">
-              Выполняем работы по ремонту в самые кратчайшие сроки
-            </p>
-          </div>
-        </AnimatedCard>
-
-        {/* 6 */}
+        {/* Карточка 4 */}
         <AnimatedCard delay="0.35s">
           <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
-          flex flex-col justify-center items-center text-center h-full bg-gray-900 rounded-2xl shadow-lg p-6">
-            <img className="w-16 h-16 mb-4" src="./images/happy.svg" alt="happy" />
-            <h2 className="text-2xl font-bold mb-2">Клиенты</h2>
-            <p className="text-base">
-              Самая лучшая награда для нас — это положительные отзывы клиентов
+          flex flex-col justify-center items-center text-center bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 h-full min-h-[200px]">
+            <img className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-3 sm:mb-4" src="./images/number1.svg" alt="#1" />
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Номер 1</h2>
+            <p className="text-sm sm:text-base text-gray-300">
+             Наши клиенты пользуются нашими услугами и рекомендуют нас
+            </p>
+          </div>
+        </AnimatedCard>
+
+
+        {/* Карточка 5 */}
+        <AnimatedCard delay="0.45s">
+          <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
+          flex flex-col justify-center items-center text-center bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 h-full min-h-[200px]">
+            <img className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-3 sm:mb-4" src="./images/speed.svg" alt="speed" />
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Скорость</h2>
+            <p className="text-sm sm:text-base text-gray-300">
+             Выполняем работы по ремонту в самые кратчайшие сроки
+            </p>
+          </div>
+        </AnimatedCard>
+        {/* Карточка 6 */}
+        <AnimatedCard delay="0.55s">
+          <div className="border border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-800 
+          flex flex-col justify-center items-center text-center bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 h-full min-h-[200px]">
+            <img className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-3 sm:mb-4" src="./images/happy.svg" alt=":)" />
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Клиенты</h2>
+            <p className="text-sm sm:text-base text-gray-300">
+             Самая лучшая награда для нас — это положительные отзывы клиентов
             </p>
           </div>
         </AnimatedCard>

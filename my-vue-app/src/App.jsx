@@ -9,7 +9,7 @@ export function App() {
     
     <div className= " relative h-full  bg-black scroll-smooth">
       <section id="main">
-     <Header id="header" />
+     <Header  />
      </section>
       <section id="hero">
         <Hero />

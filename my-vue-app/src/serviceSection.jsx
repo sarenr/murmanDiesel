@@ -19,111 +19,109 @@ function ServiceCard({ delay, children }) {         {/* анимация для 
 }
 export default function Service() {
   return (
-<div className="pt-20  flex flex-col h-full bg-black relative">          {/* Контейнер */}
-    <h1 className="px-45 text-3xl font-bold ">Наши услуги</h1>
-    <p className="px-45 text-xl mt-6">Полный комплекс оказываемых нами  услуг по ремонту и обсуживанию дизельных двигателей</p>
-    <div className="px-35">
-<div className="mt-10  grid grid-cols-1 md:grid-cols-6 gap-5">{/* Здесь будут карточки */}
-  <ServiceCard delay="0.1s">
-    <div className="  flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Первая карточка */}
-        <img className="" src="./public/images/card1.webp" alt=""/>
-        <h3 className="mt-4 text-xl font-bold mb-4">Ремонт дизельных форсунок Delphi E3, CATERPILLAR C6, C7, С9, SCANIA HPI</h3>
-        <div className="mt-auto mb-2">
-        <p className="mb-4">
-        от 14000 р
+    <div className="py-12 bg-black relative">
+      {/* Заголовок */}
+      <div className="max-w-7xl mx-auto 
+                        px-4
+                        sm:px-6 
+                        lg:px-8 
+                      text-center mb-8">
+        <h1 className="text-2xl 
+                          sm:text-3xl 
+                          lg:text-4xl 
+                        font-bold text-white mb-4">
+          Наши услуги
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+          Полный комплекс оказываемых нами услуг по ремонту и обслуживанию дизельных двигателей
         </p>
-        </div>
-        <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-         Подробнее →
-        </button>
+      </div>
+
+      {/* Сетка карточек */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ServiceCard delay="0.1s"> {/* Первая карточка */}
+            <img className="w-full h-48 object-cover rounded-t-lg" src="./public/images/card1.webp" alt=""/>
+            <h3 className="mt-4 text-lg font-bold mb-3 text-white">Ремонт дизельных форсунок Delphi E3, CATERPILLAR C6, C7, С9, SCANIA HPI</h3>
+            <div className="mt-auto">
+              <p className="text-gray-300 mb-4">от 14000 р</p>
+              <button className="w-full font-bold bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg transition-colors">
+                Подробнее →
+              </button>
+            </div>
+          </ServiceCard>
+    <ServiceCard delay="0.1s">{/* Вторая карточка */}
+      <img className="w-full h-48 object-cover rounded-t-lg" src="./public/images/card2.webp" alt=""/>
+            <h3 className="mt-4 text-lg font-bold mb-3 text-white">Кодирование форсунок - присвоение ремонтных кодов для дальнейшей их записи в ЭБУ</h3>
+            <div className="mt-auto">
+              <p className="text-gray-300 mb-4">Цена зависит от тех. задания </p>
+              <button className="w-full font-bold bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg transition-colors">
+                Подробнее →
+              </button>
     </div> 
     </ServiceCard>
-    <ServiceCard delay="0.1s">
-    <div className=" flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Вторая карточка */}
-        <img className="" src="./public/images/card2.webp" alt="" />
-        <h3 className="mt-4 text-xl font-bold mb-4">Кодирование форсунок - присвоение ремонтных кодов для дальнейшей их записи в ЭБУ</h3>
-         <div className="mt-auto mb-2"> 
-            <p className="mb-4">
-            Цена зависит от тех. задания
-            </p>
-        </div>
-       
-        <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-          Подробнее →
-         </button>
-    </div> 
+
+
+    <ServiceCard delay="0.1s">{/* Третяя карточка */}
+      <img className="w-full h-48 object-cover rounded-t-lg" src="./public/images/card3.webp" alt=""/>
+            <h3 className="mt-4 text-lg font-bold mb-3 text-white">Профессиональный ремонт любых форсунок Common Rail</h3>
+            <div className="mt-auto">
+              <p className="text-gray-300 mb-4"> От 4000 р</p>
+              <button className="w-full font-bold bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg transition-colors">
+                Подробнее →
+              </button>
+            </div> 
     </ServiceCard>
-    <ServiceCard delay="0.1s">
-     <div className="  flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Третяя карточка */}
-        <img className="" src="./public/images/card3.webp" alt="" />
-        <h3 className="mt-4 text-xl font-bold mb-4">Профессиональный ремонт любых форсунок Common Rail</h3>
-         <div className="mt-auto mb-2"> 
-            <p className="mb-4">
-            От 4000 р
-            </p>
-        </div>
-        <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-          Подробнее →
-         </button>
-    </div> 
+
+    <ServiceCard delay="0.1s">{/* Четвертая карточка */}
+      <img className="w-full h-48 object-cover rounded-t-lg" src="./public/images/card4.webp" alt=""/>
+            <h3 className="mt-4 text-lg font-bold mb-3 text-white">Диагностика форсунок Bosch Delphi Siemens Denso</h3>
+            <div className="mt-auto">
+              <p className="text-gray-300 mb-4"> От 800 р</p>
+              <button className="w-full font-bold bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg transition-colors">
+                Подробнее →
+              </button>
+            </div> 
     </ServiceCard>
-    <ServiceCard delay="0.1s">
-     <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Четвертая карточка */}
-        <img className="" src="./public/images/card4.webp" alt="" />
-        <h3 className="mt-4 text-xl font-bold mb-4">Диагностика форсунок Bosch Delphi Siemens Denso</h3>
-        <div className="mt-auto mb-2"> 
-            <p className="mb-4">
-            От 800 р
-            </p>
-        </div>
-        <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-          Подробнее →
-         </button>
-    </div> 
+    <ServiceCard delay="0.1s">{/* Пятая карточка */}
+      <img className="w-full h-48 object-cover rounded-t-lg" src="./public/images/card5.webp" alt=""/>
+            <h3 className="mt-4 text-lg font-bold mb-3 text-white">Диагностика и ремонт дизельных форсунок Ford Transit. Обучение впрыска топливных систем Denso и Siemens</h3>
+            <div className="mt-auto">
+              <p className="text-gray-300 mb-4"> От 2000 р</p>
+              <button className="w-full font-bold bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg transition-colors">
+                Подробнее →
+              </button>
+            </div> 
     </ServiceCard>
-      <ServiceCard delay="0.1s">
-     <div className="  flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Пятая карточка */}
-        <img className="" src="./public/images/card5.webp" alt="" />
-        <h3 className="mt-4 text-xl font-bold mb-4">Диагностика и ремонт дизельных форсунок Ford Transit. Обучение впрыска топливных систем Denso и Siemens</h3>
-          <div className="mt-auto mb-2"> 
-            <p className="mb-4">
-            От 2000 р
-            </p>
-        </div>
-        <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-          Подробнее →
-         </button>
-    </div> 
-    </ServiceCard>
-    <ServiceCard delay="0.1s">
-    <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Шестая карточка */}
-        <img className="" src="./public/images/card6.webp" alt="" />
-        <h3 className="mt-4 text-xl font-bold mb-4">Ремонт турбин в Мурманске</h3>
-         <div className="mt-auto mb-2"> 
-            <p className="mb-4">
-            От 2000 р
-            </p>
-        </div>
-        <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-          Подробнее →
-         </button>
-    </div> 
+
+    <ServiceCard delay="0.1s">{/* Шестая карточка */}
+      <img className="w-full h-48 object-cover rounded-t-lg" src="./public/images/card6.webp" alt=""/>
+            <h3 className="mt-4 text-lg font-bold mb-3 text-white">Ремонт турбин в Мурманске</h3>
+            <div className="mt-auto">
+              <p className="text-gray-300 mb-4"> От 2000 р</p>
+              <button className="w-full font-bold bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg transition-colors">
+                Подробнее →
+              </button>
+            </div> 
     </ServiceCard>
 </div>
 </div>
   
-    <div className="mx-45 my-20 bg-gradient-to-l from-blue-950 via-black to-blue-950 rounded-lg p-8 text-white text-center">{/* Нет нужной услуги */}
-     <h1 className="mt-4 text-3xl font-bold mb-4">Не нашли нужной услуги?</h1>
-     <p className="text-lg mb-6">
-        Готовы рассмотреть нестандартный случай и предложить решение под ваши задачи.
-    </p>
-    <button className="!px-2 !py-3 font-extrabold bg-blue-500 hover:bg-blue-600 text-white  !rounded-ms transition-colors">
-      +7 911 300-17-55
-    </button>
-  
+     <div className="max-w-7xl mx-auto 
+                      px-4 
+                      sm:px-6 
+                      lg:px-8 
+                    mt-16">
+        <div className="bg-gradient-to-l from-blue-950 via-black to-blue-950 rounded-xl p-8 text-white text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4">Не нашли нужной услуги?</h1>
+          <p className="text-lg mb-6 text-gray-300">
+            Готовы рассмотреть нестандартный случай и предложить решение под ваши задачи.
+          </p>
+          <button className="font-bold bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg transition-colors text-lg">
+            +7 911 300-17-55
+          </button>
+        </div>
+      </div>
     </div>
-</div>
-
-
- );
+  );
 }

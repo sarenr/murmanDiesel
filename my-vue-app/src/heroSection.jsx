@@ -1,31 +1,55 @@
-
 export default function Hero() {
   return (
-<div className="relative h-screen">          {/* Контейнер */}
-  <video
+    <div className="relative h-screen">
+      {/* Фоновое видео */}
+      <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
+        autoPlay muted loop playsInline
       >
-      <source src="./public/video/vehicle.mp4" type="video/mp4" />
-      </video>                      {/* Видео-фон */}
-  <div className="mt-60 h-full ml-45 absolute inset-0 max-w-3xl">        {/* Контент поверх видео */}
-    <div className="flex items-center space-x-4">
-    <button className="!px-3 !py-1  text-white  rounded-lg transition-colors">+7 911 300-17-55</button>
-    <button className="!px-3 !py-1 bg-green-700 hover:bg-green-600 text-white  rounded-3xl transition-colors">Обратный звонок</button>
-    <p className="">г. Мурманск улица Кооперативная 4/4</p>
+        <source src="./public/video/vehicle.mp4" type="video/mp4" />
+      </video>
+      {/* Контент на видео */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      <div className="absolute inset-0 flex items-start 
+                pt-40 
+                sm:pt-80 
+                md:pt-90
+                lg:items-center lg:pt-0 lg:pl-12 
+                xl:pl-48   
+                2xl:pl-48  
+                px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl w-full">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4
+                         md:mb-6">
+            <button className="px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-sm whitespace-nowrap drop-shadow-lg">
+              +7 911 300-17-55
+            </button>
+            <button className="px-4 py-2 bg-green-700 hover:bg-green-600 text-white rounded-3xl transition-colors text-sm whitespace-nowrap drop-shadow-lg">
+              Обратный звонок
+            </button>
+            <p className="text-white text-sm mt-2 sm:mt-0 sm:ml-4 drop-shadow-md">
+              г. Мурманск улица Кооперативная 4/4
+            </p>
+          </div>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-2xl">
+            Качественный ремонт и диагностика дизельных двигателей
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-2 drop-shadow-lg">
+            Профессиональная диагностика кодирование и ремонт форсунок
+          </p>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-2 drop-shadow-lg">
+            Обучение впрыска топливных систем
+          </p>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 drop-shadow-lg">
+            Ремонт турбин
+          </p>
+          
+          <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors text-sm md:text-base drop-shadow-xl">
+            Оставить заявку
+          </button>
+        </div>
+      </div>
     </div>
-    <h1 className="text-5xl font-bold ">Качественный ремонт и диагностика дизельных двигателей</h1>
-    <p className="text-2xl mt-6">Профессиональная диагностика кодирование и ремонт форсунок</p>
-    <p className="text-2xl">Обучение впраска топливных систем</p>
-    <p className="text-2xl">Ремонт турбин</p><br />
-    <button className="font-extrabold bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">Оставить заявку</button>
-  </div>
-  <div className='w-1/3 text-white'> 
-      список преймуществ 
-  </div>
-</div>
- );
+  );
 }
