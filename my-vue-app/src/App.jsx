@@ -2,6 +2,7 @@ import Header from  './headerScroll';
 import Hero from './heroSection';
 import Service from './serviceSection';
 import About from './aboutSection';
+import Contact from './contactSection';
 export function App() {
   return (
     
@@ -10,6 +11,7 @@ export function App() {
      <Hero />
      <Service />
      <About />
+     <Contact />
     </div>
     
 

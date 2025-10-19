@@ -5,7 +5,8 @@ function ServiceCard({ delay, children }) {         {/* анимация для 
   return (
     <div
       ref={ref}
-      className={`flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-700 ${
+      className={`flex flex-col h-full bg-gray-800 rounded-lg shadow-lg p-6 border border-transparent transition-all duration-500
+        ease-in-out transform hover:scale-105 hover:border-blue-800 ${
         isInView 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-10'
@@ -22,9 +23,9 @@ export default function Service() {
     <h1 className="px-45 text-3xl font-bold ">Наши услуги</h1>
     <p className="px-45 text-xl mt-6">Полный комплекс оказываемых нами  услуг по ремонту и обсуживанию дизельных двигателей</p>
     <div className="px-35">
-<div className=" grid grid-cols-1 md:grid-cols-6 gap-5">{/* Здесь будут карточки */}
+<div className="mt-10  grid grid-cols-1 md:grid-cols-6 gap-5">{/* Здесь будут карточки */}
   <ServiceCard delay="0.1s">
-    <div className=" flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg p-2">{/* Первая карточка */}
+    <div className="  flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Первая карточка */}
         <img className="" src="./public/images/card1.webp" alt=""/>
         <h3 className="mt-4 text-xl font-bold mb-4">Ремонт дизельных форсунок Delphi E3, CATERPILLAR C6, C7, С9, SCANIA HPI</h3>
         <div className="mt-auto mb-2">
@@ -37,8 +38,8 @@ export default function Service() {
         </button>
     </div> 
     </ServiceCard>
-    <ServiceCard delay="0.2s">
-    <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg p-2">{/* Вторая карточка */}
+    <ServiceCard delay="0.1s">
+    <div className=" flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Вторая карточка */}
         <img className="" src="./public/images/card2.webp" alt="" />
         <h3 className="mt-4 text-xl font-bold mb-4">Кодирование форсунок - присвоение ремонтных кодов для дальнейшей их записи в ЭБУ</h3>
          <div className="mt-auto mb-2"> 
@@ -52,8 +53,8 @@ export default function Service() {
          </button>
     </div> 
     </ServiceCard>
-    <ServiceCard delay="0.3s">
-     <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg p-2 line-clamp-3  min-w-[130px]">{/* Третяя карточка */}
+    <ServiceCard delay="0.1s">
+     <div className="  flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Третяя карточка */}
         <img className="" src="./public/images/card3.webp" alt="" />
         <h3 className="mt-4 text-xl font-bold mb-4">Профессиональный ремонт любых форсунок Common Rail</h3>
          <div className="mt-auto mb-2"> 
@@ -66,8 +67,8 @@ export default function Service() {
          </button>
     </div> 
     </ServiceCard>
-    <ServiceCard delay="0.4s">
-     <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg p-2">{/* Четвертая карточка */}
+    <ServiceCard delay="0.1s">
+     <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Четвертая карточка */}
         <img className="" src="./public/images/card4.webp" alt="" />
         <h3 className="mt-4 text-xl font-bold mb-4">Диагностика форсунок Bosch Delphi Siemens Denso</h3>
         <div className="mt-auto mb-2"> 
@@ -80,8 +81,8 @@ export default function Service() {
          </button>
     </div> 
     </ServiceCard>
-      <ServiceCard delay="0.5s">
-     <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg p-2">{/* Пятая карточка */}
+      <ServiceCard delay="0.1s">
+     <div className="  flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Пятая карточка */}
         <img className="" src="./public/images/card5.webp" alt="" />
         <h3 className="mt-4 text-xl font-bold mb-4">Диагностика и ремонт дизельных форсунок Ford Transit. Обучение впрыска топливных систем Denso и Siemens</h3>
           <div className="mt-auto mb-2"> 
@@ -94,8 +95,8 @@ export default function Service() {
          </button>
     </div> 
     </ServiceCard>
-    <ServiceCard delay="0.6s">
-    <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg p-2">{/* Шестая карточка */}
+    <ServiceCard delay="0.1s">
+    <div className="flex flex-col h-full mt-8 bg-gray-800 rounded-lg shadow-lg">{/* Шестая карточка */}
         <img className="" src="./public/images/card6.webp" alt="" />
         <h3 className="mt-4 text-xl font-bold mb-4">Ремонт турбин в Мурманске</h3>
          <div className="mt-auto mb-2"> 
