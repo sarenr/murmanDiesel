@@ -1,4 +1,4 @@
-  export default function Contact({ delay, children }) {         {/* анимация для карточек */} 
+  export default function Contact() {     
     return (
     //    ФОРМА
         <div>
@@ -52,25 +52,25 @@
                 </button>
                 </form>
             </div>
-                <h1 className="px-90 text-3xl font-bold ">Контакты</h1>
-                <p className="px-90 text-xl mt-6">Как вы можете связаться с нами</p>
+                <h1 className="mx-45 text-3xl font-bold flex justify-center items-center ">Контакты</h1>
+                <p className="mx-45 text-xl mt-6 flex justify-center items-center ">Как вы можете связаться с нами</p>
                 <div className="px-75">
                 <div className="mt-7 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
                                  {/* Адрес */}
-                     <div className="bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
+                     <div className="pl-10 bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
                         <h3 className="text-sm font-bold text-white mb-1">Адрес</h3>
                         <p className="text-gray-300 text-sm mb-1">
                         г. Мурманск, Кооперативная 4/4</p>
                     </div>
                                 {/* Телефоны */}
-                     <div className="bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
+                     <div className="pl-10 bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
                         <h3 className="text-sm font-bold text-white mb-1">Ремонт форсунок</h3>
                         <p className="text-gray-300 text-sm mb-1">
                         +7 (911) 3001755
                         </p>
                         
                     </div>
-                    <div className="bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
+                    <div className="pl-10 bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
                         
                         <h3 className="text-sm font-bold text-white mb-1">Ремонт турбин</h3>
                         <p className="text-gray-300 text-sm mb-1">
@@ -78,7 +78,7 @@
                         </p>
                     </div>
                                {/* WhatsApp */}
-                    <div className="bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
+                    <div className="pl-10 bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
                         <h3 className="text-sm font-bold text-white mb-1">WhatsApp и Viber</h3>
                         <p className="text-gray-300 text-sm mb-1">
                         +79533023022 (Антон)
@@ -87,7 +87,7 @@
                     </div>
             
                             {/* Часы работы */}
-                    <div className="bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
+                    <div className="pl-10 bg-gray-900 rounded-2xl p-1 border border-gray-700 h-auto w-auto">
                         <h3 className="text-sm font-bold text-white mb-1">Пн-Пт с 10.00 до 18.00</h3>
                         <p className="text-gray-300 text-sm mb-1">
                          
